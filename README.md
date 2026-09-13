@@ -1,193 +1,142 @@
 # Decision Systems Methods
 
-General methods for approaching complex technical decisions when evidence is incomplete, requirements interact, assumptions matter, and the consequences of a weak conclusion can be significant.
+Complex technical decisions are rarely difficult because there is no information.
 
-The purpose is not to replace professional judgment.
+They are difficult because the information is incomplete, the requirements interact, assumptions are easy to overlook, and different interpretations can lead to very different conclusions.
 
-It is to make important reasoning easier to examine, challenge, communicate, and revise when better information becomes available.
+My interest in decision systems comes from working in situations where the answer is not obvious and where getting to a defensible conclusion requires more than simply finding a reference or running a calculation.
 
-## Start With the Decision
+The purpose of this repository is to document some general principles I use when thinking through those situations.
 
-Technical analysis is only useful when it addresses the right question.
+It is not intended to replace professional judgment. The goal is to make the reasoning around that judgment easier to understand, question, and revise when better information becomes available.
 
-Before beginning detailed work, establish:
+## Start With the Actual Decision
 
-- What are we trying to accomplish?
-- What decision needs to be supported?
-- What conditions or constraints matter?
-- What would constitute a successful outcome?
-- What are the consequences of being wrong?
+Before getting deep into analysis, I try to understand what decision is really being made.
 
-The same technical facts may lead to different analyses depending on the objective.
+The same technical condition can mean very different things depending on the objective.
 
-Understanding the objective therefore comes before choosing the analysis.
+A question about a building, system, project, or technical issue may look the same at first, but the analysis changes depending on whether someone is trying to design it, acquire it, approve it, repair it, challenge it, estimate it, or decide whether to proceed at all.
 
-## Separate Evidence From Conclusion
+That is why I prefer to start with a few basic questions.
 
-Evidence should not be treated as a conclusion merely because it comes from a credible source.
+What are we trying to accomplish? What decision needs to be supported? What constraints already exist? What would a successful outcome look like? What are the consequences if the conclusion is wrong?
 
-Important questions include:
+Those questions usually matter more than jumping directly into the technical details.
 
-- What does the source actually establish?
-- Is it relevant to the situation being evaluated?
-- Does it apply under the same conditions?
-- Is it current?
-- Are important assumptions required before using it?
-- Does another credible source point in a different direction?
+## Evidence Is Not the Same as a Conclusion
 
-A source can be authoritative and still be inapplicable to a particular case.
+A credible source does not automatically produce a credible conclusion.
 
-The useful question is not simply:
+The more important question is whether the source actually applies to the situation being evaluated.
 
-**Do we have evidence?**
+A report, standard, code provision, test result, prior decision, or technical reference may be perfectly valid and still be the wrong basis for the current case.
 
-It is:
+Conditions may be different. The jurisdiction may be different. The project type, material, system configuration, time period, or underlying assumptions may not match.
 
-**Does this evidence legitimately support this conclusion under these conditions?**
+So the question is not simply whether evidence exists.
 
-## Keep Different Kinds of Information Distinct
+The question is whether that evidence legitimately supports the conclusion being made.
 
-Facts, requirements, assumptions, interpretations, calculations, risks, and decisions serve different purposes.
+## Keep Assumptions Visible
 
-They should not quietly become interchangeable.
+Assumptions are often necessary in technical work.
 
-Likewise, what something **is** and how confidently it is **known** are different questions.
+The problem starts when they stop looking like assumptions and quietly become treated as facts.
 
-For example, a requirement may be well established, disputed, or unresolved.
+When an important conclusion depends on an assumption, I want to know why that assumption was used, what supports it, how sensitive the conclusion is to it, and what happens if it turns out to be wrong.
 
-An assumption may later be confirmed.
+Some assumptions barely matter.
 
-An interpretation may later prove inapplicable.
+Others can completely change the result.
 
-Making those distinctions visible helps prevent uncertainty from disappearing inside a final answer.
+Those should not be treated the same way.
 
-## Unknown ≠ False
+## Unknown Does Not Mean False
 
-Missing information should remain visible.
+One of the easiest mistakes in technical decision-making is to turn missing information into a negative answer.
 
-An unresolved condition should not automatically become a negative conclusion simply because sufficient evidence has not yet been found.
+If something has not been established, that does not necessarily mean it is false.
 
-Likewise, absence of evidence is not necessarily evidence of absence.
+It may simply be unresolved.
 
-Preserving uncertainty is often more useful than manufacturing certainty.
+The distinction matters because uncertainty should remain visible until there is enough evidence to support a stronger conclusion.
 
-## Conflict ≠ Truth
+Artificial certainty is often more dangerous than an honest unknown.
 
-Credible sources may disagree.
+## Conflict Should Be Understood Before It Is Resolved
 
-Professionals may interpret the same requirement differently.
+Technical information does not always agree.
 
-Different methods may produce different results because they use different assumptions, definitions, or boundary conditions.
+Two professionals may interpret the same requirement differently. Two methods may produce different results. Two credible sources may appear to conflict.
 
-Before resolving a conflict, understand what is actually conflicting.
+When that happens, I try to understand the source of the disagreement before deciding which position is stronger.
 
-Ask:
+Are the sources actually addressing the same condition? Are they using the same definitions? Are their assumptions different? Is one being applied outside its intended scope?
 
-- Are the sources addressing the same condition?
-- Are the definitions equivalent?
-- Are the assumptions the same?
-- Is one source being applied outside its intended scope?
-- What additional evidence would clarify the disagreement?
+Sometimes the disagreement disappears once the underlying conditions are compared carefully.
 
-The goal is not premature agreement.
+Sometimes it does not.
 
-It is understanding why reasonable conclusions differ.
+Either way, the disagreement itself is useful information.
 
-## Make Assumptions Visible
+## Test the Conclusion Before Accepting It
 
-Assumptions are often necessary.
+A conclusion becomes more credible when it survives an attempt to disprove it.
 
-The risk comes when they are forgotten and begin to behave like established facts.
+Before accepting an important result, I try to ask what could make it wrong.
 
-For an important assumption, ask:
+What evidence would contradict it? Which assumption matters most? Could another interpretation change the outcome? Is an important interface being missed? Has precedent been reused without confirming that the original conditions still apply?
 
-- Why is it being used?
-- What evidence supports it?
-- How much does the conclusion depend on it?
-- What happens if it is wrong?
+A strong review should not only collect support for the preferred answer.
 
-Not every assumption deserves equal attention.
+It should also look for credible reasons that answer may fail.
 
-The most important ones are those capable of materially changing the outcome.
+## Consider Alternatives Before Locking In
 
-## Consider Alternatives Before Commitment
+Technical teams can become attached to the first solution that appears reasonable.
 
-A preferred answer should be tested against credible alternatives before it becomes entrenched.
+That is why I think it is useful to consider alternatives before a preferred answer becomes entrenched.
 
-Alternatives may involve different technical approaches, interpretations, assumptions, sequencing, mitigations, or simply taking no immediate action.
+The alternative does not always need to be another design.
 
-The purpose is not to generate options for their own sake.
+It may be a different interpretation, a different assumption, a different sequence of work, a mitigation measure, or even delaying a decision until one important unknown is resolved.
 
-It is to determine whether the preferred conclusion remains strong after reasonable alternatives are considered.
+The goal is not to create unnecessary options.
 
-## Failure-Mode Review
+It is to make sure the preferred path remains the strongest one after reasonable alternatives have been considered.
 
-Before accepting an important conclusion, deliberately try to weaken it.
+## Decisions Can Change
 
-Useful questions include:
+A good technical decision should be defensible based on the information available at the time.
 
-1. What evidence would contradict this conclusion?
-2. Which assumption has the greatest influence on the result?
-3. Could another interpretation or boundary condition materially change it?
-4. Is the evidence applicable to this specific situation?
-5. Are important interfaces or constraints missing?
-6. Has precedent been reused without confirming that the underlying conditions still apply?
-7. What would a strong counterargument look like?
-8. What new information would require reconsideration?
+That does not mean it should become permanent.
 
-A robust review does not search only for evidence supporting the preferred answer.
+If material information changes, the conclusion may need to change with it.
 
-It also searches for credible reasons that answer could fail.
+When that happens, the important questions are straightforward: what changed, why does it matter, which earlier conclusions depended on it, and does the original decision still hold?
 
-## Decisions Are Not Necessarily Permanent
+Changing a conclusion because the evidence changed is not a weakness.
 
-A defensible conclusion should remain open to re-evaluation when material information changes.
+It is part of good technical judgment.
 
-When that happens, ask:
+## Professional Judgment Still Matters
 
-- What changed?
-- Why does it matter?
-- Which prior conclusions depended on it?
-- Does the existing decision still remain supportable?
+Structured reasoning does not eliminate professional judgment.
 
-Good decision-making includes knowing when an earlier conclusion should be revisited.
+In many cases it makes that judgment more important because it becomes clearer where judgment was actually used.
 
-## Professional Judgment
+The objective is not to create automated certainty.
 
-Structure does not eliminate the need for qualified professional judgment.
-
-It can make that judgment more useful by clarifying:
-
-- what evidence informed it,
-- where assumptions influenced it,
-- what uncertainty remains,
-- and what could justify reconsideration.
-
-The objective is not automated certainty.
-
-It is better-informed, more transparent, and more defensible decision-making.
-
-## Intended Use
-
-These principles may be useful in areas such as:
-
-- engineering and technical review
-- technical due diligence
-- infrastructure and construction
-- planning and development
-- research and evaluation
-- safety and risk analysis
-- multidisciplinary technical programs
-- AI-assisted professional work
-- governance and decision support
-
-Different industries, jurisdictions, disciplines, and risk environments require different standards of evidence, authority, review, and professional responsibility.
+It is to make difficult technical decisions more transparent, more defensible, and easier to revisit when conditions change.
 
 ## About This Repository
 
-The material in this repository is intentionally generic and non-confidential.
+The material here is intentionally general and non-confidential.
 
-It is intended to demonstrate general approaches to technical reasoning and decision review without reproducing proprietary systems, employer-specific procedures, confidential project information, or protected implementation methods.
+The examples are intended to demonstrate approaches to technical reasoning, evidence, uncertainty, assumptions, alternatives, and decision review.
+
+They do not reproduce proprietary systems, confidential project information, employer-specific procedures, or protected implementation methods.
 
 Created by [Ehsan Mohajerani, P.E.](https://github.com/ehsanmohajerani)
 
