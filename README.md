@@ -1,6 +1,6 @@
 # Decision Systems Methods
 
-Complex technical decisions are rarely difficult because there is no information.
+Complex technical decisions are rarely difficult because information is completely absent.
 
 They are difficult because the information is incomplete, the requirements interact, assumptions are easy to overlook, and different interpretations can lead to very different conclusions.
 
@@ -129,6 +129,12 @@ In many cases it makes that judgment more important because it becomes clearer w
 The objective is not to create automated certainty.
 
 It is to make difficult technical decisions more transparent, more defensible, and easier to revisit when conditions change.
+
+## Case Studies
+
+[Technical Due Diligence With Incomplete Information](examples/01-technical-due-diligence-case-study.md)
+
+A fictional example showing how I would approach an acquisition decision when the available technical information is incomplete and some of the remaining uncertainty could materially affect cost, schedule, or feasibility.
 
 ## About This Repository
 
